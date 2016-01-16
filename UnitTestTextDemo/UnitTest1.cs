@@ -10,12 +10,21 @@ namespace UnitTestTextDemo
         //able was I ere I saw elba
         //elba saw I ere I was able
         [TestMethod]
-        public void TestPalindrome()
+        public void TestPalindromeReverseStrings()
         {
             string sentence = "able was I ere I saw elba";
             string expected = "elba saw I ere I was able";
-            var palindrome = new TextDemo.TextFunctions().Palindrome(sentence);
-            Assert.AreEqual(expected,palindrome);
+            var palindrome = new TextDemo.TextFunctions().PalindromeReverseStrings(sentence);
+            Assert.AreEqual(expected, palindrome);
+        }
+
+        [TestMethod]
+        public void TestPalindromeSwap()
+        {
+            string sentence = "able was I ere I saw elba";
+            string expected = "elba saw I ere I was able";
+            var palindrome = new TextDemo.TextFunctions().PalindromeSwap(sentence);
+            Assert.AreEqual(expected, palindrome);
         }
     }
 }
