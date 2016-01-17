@@ -26,5 +26,14 @@ namespace UnitTestTextDemo
             var palindrome = new TextDemo.TextFunctions().PalindromeSwap(sentence);
             Assert.AreEqual(expected, palindrome);
         }
+    
+        [TestMethod]
+        public void TestPalindromeSimple()
+        {
+            string sentence = "able was I ere I saw elba";
+            string expected = "elba saw I ere I was able";
+            var palindrome = new TextDemo.TextFunctions().PalindromeSimple(sentence);
+            Assert.AreEqual(expected, palindrome);
+        }
     }
 }

@@ -57,5 +57,22 @@ namespace TextDemo
             }
             return result;
         }
+
+        public string PalindromeSimple(string sentence)
+        {
+            var tokens = sentence.Split();
+            var result = "";
+            foreach (string word in tokens)
+            {
+                char[] arr = word.ToCharArray();
+                Array.Reverse(arr);
+                result += new string(arr);
+                if (word != tokens.Last())
+                {
+                    result += " ";
+                }
+            }
+            return result;
+        }
     }
 }
